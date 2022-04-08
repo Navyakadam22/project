@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>milivolts</title>
+    <link rel="stylesheet" href="css/milivolts.css">
+
+    <script>
+        function Convert(){
+            var volts = document.getElementById('data').value;
+            const factor = 1000;
+            var milivolts = volts * factor;
+            document.getElementById('res').value = milivolts;
+            
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Voltage Conversion</h1>
+    </header>
+
+    <div class="buttons">
+        <button type="button" class="aa"><a href="microvolts.html" target="_blank">Volts to microvolts</a></button>
+        <button type="button" class="aa" id="aa"><a href="kilovolts.html" target="_blank">Volts to Kilovolts</a></button>
+    </div>
+    
+
+    <form>
+        <div id="tab">
+        <table class="full">
+        
+            <tr>
+                <td><h2 style="text-align: center;"><span>Volts to Milivolts</span></h2></td>
+            </tr>
+           
+            <tr>
+                <td><strong class="txt">Enter Voltage in volts:</strong><input type="number" id="data">V</td>
+            </tr>
+
+            <tr>
+                <td><div>
+                    <button class="b" type="button" onclick="Convert()">Convert</button>
+                    <button class="b" type="reset">Clear</button></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong class="txt">Result in Milivolts:</strong><input id="res" readonly>mV<br></td>
+            </tr>
+        </table>
+        </div>
+    </form>
+</body>
+</html>

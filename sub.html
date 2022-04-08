@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sub.css">
+    <title>Subtraction Calculator</title>
+    <script>
+
+        function calculate(){
+            var value1 = parseFloat(document.getElementById('in1').value);
+            var value2 = parseFloat(document.getElementById('in2').value);
+            document.getElementById('ans').value = value1-value2;
+            
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+    <h1>Subtraction Calculator</h1>
+    </header>
+
+    <form>
+        <table class="tab">
+            <tr>
+                <td>INPUT1:</td>
+                <td><input type="number" id="in1" placeholder="Enter a number"></td>
+            </tr>
+            
+            <tr>
+                <td>INPUT2:</td>
+                <td><input type="number" id="in2" placeholder="Enter a number"></td>
+            </tr>
+            <tr><td colspan="4"><div class="but">
+                <button class="b" type="button" onclick="calculate()">Calculate</button>
+                <button class="b" type="reset">Reset</button></div>
+                </td>
+            </tr>
+            <tr>
+                <td>RESULT:</td>
+                <td><input id="ans" readonly> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

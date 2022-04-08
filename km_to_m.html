@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM to M</title>
+    <link rel="stylesheet" href="css/km_to_m.css">
+
+    <script>
+        function LengthConvert(){
+            var km = document.getElementById('data').value;
+            const factor = 1000;
+            var meter = km * factor;
+            document.getElementById('res').value = meter;
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Kilometer to Meter Conversion</h1>
+    <form>
+        <table class="full">
+            <tr>
+                <td><h2 style="text-align: center;"><span>Length Conversion</span></h2></td>
+            </tr>
+
+            <tr>
+                <td><strong class="txt">From:</strong><input class="box" type="text" value="Kilometer" readonly>
+                    <strong class="txt">To:</strong><input class="box" type="text" value="meter" readonly></td>
+            </tr>
+           
+            <tr>
+                <td><strong class="txt">Value to Convert:</strong><input type="number" placeholder="Enter a number" id="data"></td>
+            </tr>
+
+            <tr>
+                <td><div>
+                    <button class="b" type="button" onclick="LengthConvert()">Convert</button>
+                    <button class="b" type="reset">X</button></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong class="txt">Result:</strong><input id="res" readonly><br></td>
+            </tr>
+        </table>
+    </form>
+    <div class="bac">
+        <button class="back" type="button"><a href="index.html"><strong>Back</strong></a></button>
+    </div>
+</body>
+</html>

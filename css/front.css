@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+a:hover{
+    color: rgb(6, 95, 83);
+}
+
+header{
+    text-align: center;
+    background-color: rgb(76, 152, 142);
+    height: 80px;
+    padding-top: 40px;
+    padding-right: 60%;
+}
+
+.first{
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.sec{
+    padding-top: 4%;
+}
+
+.third{
+    padding-top: 4%;
+}
+
+h2{
+    padding-bottom: 6px;
+    color: rgb(89, 9, 42);
+}
+
+body{
+    background-color:rgb(251, 241, 220) ;
+}

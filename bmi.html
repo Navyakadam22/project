@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi</title>
+
+    <link rel="stylesheet" href="css/bmi.css">
+
+    <script>
+        function convert(){
+            var input1 = document.getElementById("H").value;
+            var input2 = document.getElementById("W").value;
+            var bmi = (input2)/(input1*input1/10000);
+            document.getElementById("res1").value = bmi;
+
+            if(bmi<=18.4){
+                document.getElementById("res2").value = "UnderWeight";
+                document.getElementById("res3").value = "Malnutrition";
+            }
+
+            else if(bmi>18.4 && bmi<=24.9){
+                document.getElementById("res2").value = "Normal Weight";
+                document.getElementById("res3").value = "Low Risk";
+            }
+
+            else if(bmi>24.9 && bmi<=29.9){
+                document.getElementById("res2").value = "OverWeight";
+                document.getElementById("res3").value = "Enhanced Risk";
+            }
+
+            else if(bmi>29.9 && bmi<=34.9){
+                document.getElementById("res2").value = "Moderately Obese";
+                document.getElementById("res3").value = "Medium Risk";
+            }
+
+            else if(bmi>34.9 && bmi<=39.9){
+                document.getElementById("res2").value = "Severely Obese";
+                document.getElementById("res3").value = "High Risk";
+            }
+
+            else{
+                document.getElementById("res2").value = "Very Severely obese";
+                document.getElementById("res3").value = "Very High Risk";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>BMI Calculator</h1>
+    </div>
+
+    <div class="table">
+        <form>
+            <table>
+                <tr>
+                    <td><strong class="txt">Height</strong><input id="H" type="number"><span>cm</span></td>
+                </tr>
+
+                <tr>
+                    <td><strong class="txt">Weight</strong><input id="W" type="number"><span>kg</span></td>
+                </tr>
+
+                <tr>
+                    <td><button class="buttons" type="button" onclick="convert()">Convert</button>
+                        <button class="buttons" type="reset">Reset</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong class="txt">BMI</strong><input id="res1" readonly></td>
+                </tr>
+
+                <tr>
+                    <td><strong class="txt">BMI Category</strong><input id="res2" readonly></td>
+                </tr>
+
+                <tr>
+                    <td><strong class="txt">Health Risk</strong><input id="res3" readonly></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+</body>
+</html>
